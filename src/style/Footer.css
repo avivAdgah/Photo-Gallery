@@ -1,0 +1,9 @@
+.footer{
+    border-top: 2px solid rgba(127, 127, 127, 0.256);
+    font-family: "Yuji Mai", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #234164;
+    width: 30%;
+    margin: auto;
+}

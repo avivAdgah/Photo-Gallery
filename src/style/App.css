@@ -1,0 +1,36 @@
+.warpper{
+    border: 2px solid;
+    text-align: center;
+}
+.title{
+    font-family: "Yuji Mai", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #234164;
+}
+.items-container{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+.item{
+    width: 300px;
+    height: 300px;
+}
+
+.image{
+    cursor: pointer;
+    width: 90%;
+    height: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 20px;
+    box-shadow: 10Px 10px 10px rgba(0, 0, 0, 0.6);
+}
+.image:hover{
+    transform: scale(1.1);
+    transition: all 0.2s;
+    box-shadow: none;
+    opacity: 1;
+} 
