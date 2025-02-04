@@ -1,10 +1,13 @@
-.slider-warpper{
-    position: absolute;
-    top: 30%;
-    left: 30%;
+
+.slider-warpper {
+    position: fixed; 
+    top: 50%;  
+    left: 50%; 
+    transform: translate(-50%, -50%); 
     z-index: 1;
     width: 40vw;
-}
+  }
+
 .slider-content{
     display: flex;
     width: 100%;
@@ -64,3 +67,19 @@
     transform: scale(0.7);
     transition: all 0.2s;
 }
+
+@media (max-width: 768px) {
+    .slider-warpper {
+        width: 80vw;
+      }
+  
+    .previous-button,
+    .next-button {
+      font-size: 25px; 
+    }
+  
+    .slider-year {
+      font-size: 12px;
+      margin-top: 5px;
+    }
+  }

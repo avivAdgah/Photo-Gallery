@@ -3,8 +3,8 @@ import './style/Footer.css'
 
 export default function Footer() {
   return (
-     <div className='footer'>
-        <p>© 2024 Aviv Adgah. All rights reserved.</p>
-    </div>
+    <footer>
+      <p>© {new Date().getFullYear()} Aviv Adgah. All rights reserved.</p>
+    </footer>
   )
 }

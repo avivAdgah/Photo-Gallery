@@ -47,7 +47,7 @@ function App() {
           <li className="item" key={image}>
             <img
               className="image"
-              src={`src/assets/images/${image}.jpg`}
+              src={`images/${image}.jpg`}
               alt="Photo"
               onClick={() => openSlider(image, index)}
               style={{ opacity: isSliderOpen ? 0.4 : 0.9 }}

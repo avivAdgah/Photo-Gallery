@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import "./style/Slider.css";
 
 export default function Slider({
   images,
   closeSlider,
   isSliderOpen,
-  setIsSliderOpen,
   currentImage,
   setCurrentImage,
   currentIndex,
@@ -42,7 +41,7 @@ export default function Slider({
         ></i>
         <img
           className="slider-image"
-          src={`src/assets/images/${currentImage}.jpg`}
+          src={`images/${currentImage}.jpg`}
           alt=""
         />
         <i
