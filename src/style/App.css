@@ -1,3 +1,6 @@
+body{
+    margin: 0;
+}
 .warpper{
     border: 2px solid;
     text-align: center;
