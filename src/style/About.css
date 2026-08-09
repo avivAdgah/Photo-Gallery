@@ -1,0 +1,28 @@
+.about {
+  background-color: var(--color-bg-alt);
+}
+
+.about-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: var(--radius-md);
+}
+
+.about-content p {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-2);
+  max-width: 52ch;
+}
+
+@media (max-width: 768px) {
+  .about-inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+}

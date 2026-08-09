@@ -1,0 +1,105 @@
+.gallery-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.gallery-filter {
+  padding: 0.5rem 1.1rem;
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: border-color var(--transition-base), color var(--transition-base),
+    background-color var(--transition-base);
+}
+
+.gallery-filter:hover {
+  border-color: var(--color-accent);
+  color: var(--color-text);
+}
+
+.gallery-filter--active,
+.gallery-filter--active:hover {
+  background-color: var(--color-text);
+  border-color: var(--color-text);
+  color: var(--color-bg);
+}
+
+.gallery-grid {
+  list-style: none;
+  columns: 3 280px;
+  column-gap: var(--space-3);
+}
+
+.gallery-item {
+  break-inside: avoid;
+  margin-bottom: var(--space-3);
+}
+
+.gallery-item-button {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  line-height: 0;
+}
+
+.gallery-item-button img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item-button:hover img,
+.gallery-item-button:focus-visible img {
+  transform: scale(1.035);
+}
+
+.gallery-item-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: var(--space-3);
+  background: linear-gradient(to top, rgba(12, 10, 9, 0.72) 0%, rgba(12, 10, 9, 0) 55%);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+  text-align: left;
+}
+
+.gallery-item-button:hover .gallery-item-overlay,
+.gallery-item-button:focus-visible .gallery-item-overlay {
+  opacity: 1;
+}
+
+.gallery-item-category {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #e9c9a8;
+  margin-bottom: 0.25rem;
+}
+
+.gallery-item-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: #faf9f6;
+}
+
+@media (max-width: 600px) {
+  .gallery-grid {
+    columns: 1 100%;
+  }
+}

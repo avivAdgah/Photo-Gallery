@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(disown)",
+      "Bash(command -v chromium-cli)",
+      "Bash(curl -s http://localhost:5173)",
+      "Bash(cat /tmp/vite-dev.log; echo \"---ports---\"; netstat -ano | grep ':5173' | head -20)",
+      "Read(//tmp/**)",
+      "Bash(curl -s http://localhost:5174)"
+    ]
+  }
+}

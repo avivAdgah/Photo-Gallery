@@ -1,0 +1,122 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background-color: rgba(250, 249, 246, 0.9);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+}
+
+.navbar-brand {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.navbar-links {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.navbar-links a {
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-text);
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--transition-base);
+}
+
+.navbar-links a:hover {
+  border-color: var(--color-accent);
+}
+
+.navbar-toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar-toggle-bar,
+.navbar-toggle-bar::before,
+.navbar-toggle-bar::after {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: var(--color-text);
+  transition: transform var(--transition-base), opacity var(--transition-base);
+}
+
+.navbar-toggle-bar::before,
+.navbar-toggle-bar::after {
+  content: "";
+  position: relative;
+}
+
+.navbar-toggle-bar::before {
+  top: -7px;
+}
+
+.navbar-toggle-bar::after {
+  top: 5px;
+}
+
+.navbar-toggle-bar.is-open {
+  background-color: transparent;
+}
+
+.navbar-toggle-bar.is-open::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.navbar-toggle-bar.is-open::after {
+  top: -2px;
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-links {
+    position: absolute;
+    top: 76px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-base);
+  }
+
+  .navbar-links--open {
+    max-height: 240px;
+  }
+
+  .navbar-links a {
+    padding: var(--space-2) var(--space-3);
+    border-bottom: 1px solid var(--color-border);
+  }
+}
