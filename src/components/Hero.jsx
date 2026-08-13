@@ -12,7 +12,7 @@ export default function Hero() {
 
       <div className="hero-content container">
         <span className="eyebrow">Photography Portfolio</span>
-        <h1 className="hero-title">Aviv Adgah</h1>
+        <h1 className="hero-title">Aviv Portfolio</h1>
         <p className="hero-tagline">
           Placeholder tagline — a short line about your style and what you shoot
           goes here.
